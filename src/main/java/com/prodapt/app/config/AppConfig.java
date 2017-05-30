@@ -58,13 +58,13 @@ public class AppConfig extends SpringBootServletInitializer {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         
-        dataSource.setUrl(env.getProperty("url"));
-        dataSource.setUsername(env.getProperty("username"));
-        dataSource.setPassword(env.getProperty("password"));
+     //   dataSource.setUrl(env.getProperty("url"));
+     //   dataSource.setUsername(env.getProperty("username"));
+     //   dataSource.setPassword(env.getProperty("password"));
         
-//        dataSource.setUrl("jdbc:mysql://localhost/microdb?useSSL=false");
-//        dataSource.setUsername("root");
-//        dataSource.setPassword("root");
+   dataSource.setUrl("jdbc:mysql://192.168.54.186/microdb?useSSL=false");
+        dataSource.setUsername("root");
+       dataSource.setPassword("password");
         return dataSource;
     }
 
